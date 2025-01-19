@@ -23,6 +23,7 @@
         </activity>
 
         <service android:name=".service.BackgroundServiceImplementation.MusicService"/>
+        <service android:name=".service.BoundServiceImplementation.BoundMusicService"/>
     </application>
 
 </manifest>
