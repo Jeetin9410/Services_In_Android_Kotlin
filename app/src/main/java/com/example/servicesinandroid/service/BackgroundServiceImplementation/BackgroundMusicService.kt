@@ -6,7 +6,7 @@ import android.media.MediaPlayer
 import android.os.IBinder
 import android.util.Log
 
-class MusicService : Service() {
+class BackgroundMusicService : Service() {
     private var player: MediaPlayer? = null
     override fun onBind(p0: Intent?): IBinder? {
        Log.d("Service" , "onBind")

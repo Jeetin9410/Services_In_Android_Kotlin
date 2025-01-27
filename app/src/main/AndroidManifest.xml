@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -22,8 +25,10 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".service.BackgroundServiceImplementation.MusicService"/>
+        <service android:name=".service.BackgroundServiceImplementation.BackgroundMusicService"/>
         <service android:name=".service.BoundServiceImplementation.BoundMusicService"/>
+        <service android:name=".service.ForegroundServiceImplementation.ForegroundMusicService"
+            android:foregroundServiceType="mediaPlayback"/>
     </application>
 
 </manifest>
